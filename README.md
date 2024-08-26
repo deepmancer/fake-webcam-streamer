@@ -1,8 +1,17 @@
 # 📷 Fake Webcam Streamer
 
-## Overview
+
+<p align="center">
+  <img src="https://img.shields.io/badge/FFmpeg-007808.svg?style=for-the-badge&logo=FFmpeg&logoColor=white" alt="FFmpeg Badge"/>
+  <img src="https://img.shields.io/badge/Ubuntu-E95420.svg?style=for-the-badge&logo=Ubuntu&logoColor=white" alt="Ubuntu Badge"/>
+  <img src="https://img.shields.io/badge/GNU%20Bash-4EAA25.svg?style=for-the-badge&logo=GNU-Bash&logoColor=white" alt="GNU Bash Badge"/>
+  <img src="https://img.shields.io/badge/Linux-FCC624.svg?style=for-the-badge&logo=Linux&logoColor=black" alt="Linux Badge"/>
+  <img src="https://img.shields.io/badge/GNOME%20Terminal-241F31.svg?style=for-the-badge&logo=GNOME-Terminal&logoColor=white" alt="GNOME Terminal Badge"/>
+</p>
 
 **Fake Webcam Streamer** is an automated Bash script designed to turn a video file into a virtual webcam on Ubuntu. Using `v4l2loopback` and `ffmpeg`, it creates a seamless virtual webcam experience that can be utilized in any video input-enabled application. Whether you’re simulating a live feed for testing, presentations, or just for fun, this script handles everything from device detection to cleanup, so you don't have to.
+
+---
 
 ## 🚀 Features
 
@@ -10,6 +19,8 @@
 - **🔄 Seamless Streaming:** Streams your chosen video file in a continuous loop as a virtual webcam.
 - **🧹 Automatic Cleanup:** Ensures the virtual webcam module is removed when the script exits, leaving no traces.
 - **⚠️ Error Handling:** Built-in checks for missing or invalid video files to prevent issues.
+
+---
 
 ## 📋 Requirements
 
@@ -19,6 +30,7 @@
   ```bash
   sudo apt-get install ffmpeg
   ```
+---
 
 ## 💻 Installation
 
@@ -35,6 +47,8 @@
 
 3. **Install the required dependencies** as mentioned in the **Requirements** section.
 
+---
+
 ## ▶️ Usage
 
 To use the script, pass the path to your video file as an argument:
@@ -43,11 +57,15 @@ To use the script, pass the path to your video file as an argument:
 ./fake_webcam.sh /path/to/video.mkv
 ```
 
+---
+
 ### Example:
 
 ```bash
 ./fake_webcam.sh ~/Videos/sample_video.mkv
 ```
+
+---
 
 ### ⚙️ How It Works:
 
@@ -55,18 +73,20 @@ To use the script, pass the path to your video file as an argument:
 - **Validation:** The script checks if the video file path is provided and verifies its existence.
 - **Device Detection:** Finds the next available video device number (`/dev/videoX`), loads the `v4l2loopback` module on that device, and streams the video in a loop using `ffmpeg`.
 
+---
+
 ## 🔗 Notes
 
 - The virtual webcam will be accessible under `/dev/videoX` (where `X` is the device number found by the script). You can use this in applications like Zoom, OBS, or any other video conferencing software.
 - The video will loop continuously until the script is stopped.
 
-## 🤝 Contributing
-
-Contributions are welcome! Please fork this repository, make your changes, and submit a pull request. For significant changes, kindly open an issue first to discuss what you intend to modify.
+---
 
 ## 📄 License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+---
 
 ## 🙏 Acknowledgements
 
